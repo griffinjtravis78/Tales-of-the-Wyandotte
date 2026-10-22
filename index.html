@@ -43,17 +43,17 @@
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="hover:text-earth-sand transition">Home</a>
                     
-                    <!-- Dropdown: Series -->
-                    <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+                    <!-- Dropdown: Series (Fixed with wrapper padding to bridge hover gap) -->
+                    <div x-data="{ open: false }" @mouseleave="open = false" class="relative py-2">
                         <button @mouseover="open = true" @click="open = !open" class="flex items-center hover:text-earth-sand transition focus:outline-none">
                             <span>Tales of the Wyandotte</span>
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <!-- Dropdown Panel -->
-                        <div x-show="open" x-transition.origin.top.duration.200ms class="absolute left-0 mt-2 w-72 bg-white text-gray-800 rounded-md shadow-lg py-2 border border-gray-100">
-                            <a href="#book-1" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark font-medium">Book 1: Little Turtle and the Great Tradition</a>
-                            <a href="#book-2" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark font-medium">Book 2: Little Turtle and the River's Song</a>
-                            <a href="#book-3" class="block px-4 py-2 text-sm text-gray-400 font-medium cursor-default">Book 3: (coming soon)</a>
+                        <div x-show="open" x-transition.origin.top.duration.200ms class="absolute left-0 mt-0 w-72 bg-white text-gray-800 rounded-md shadow-lg py-2 border border-gray-100 z-50">
+                            <a href="#book-1" @click="open = false" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark font-medium">Book 1: Little Turtle and the Great Tradition</a>
+                            <a href="#book-2" @click="open = false" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark font-medium">Book 2: Little Turtle and the River's Song</a>
+                            <a href="#book-3" @click="open = false" class="block px-4 py-2 text-sm text-gray-400 font-medium cursor-default">Book 3: (coming soon)</a>
                         </div>
                     </div>
 
@@ -72,16 +72,16 @@
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                     <!-- Mobile Menu Drawer -->
-                    <div x-show="mobileOpen" class="absolute top-20 left-0 w-full bg-forest-dark text-white shadow-xl border-t border-forest-light/30 px-6 py-6 space-y-4">
-                        <a href="#home" class="block text-lg hover:text-earth-sand">Home</a>
+                    <div x-show="mobileOpen" class="absolute top-20 left-0 w-full bg-forest-dark text-white shadow-xl border-t border-forest-light/30 px-6 py-6 space-y-4 z-50">
+                        <a href="#home" @click="mobileOpen = false" class="block text-lg hover:text-earth-sand">Home</a>
                         <div class="space-y-2 pl-4 border-l-2 border-forest-light/40">
                             <p class="text-xs uppercase tracking-wider text-earth-sand font-semibold">Tales of the Wyandotte</p>
-                            <a href="#book-1" class="block hover:text-earth-sand">Book 1: Little Turtle and the Great Tradition</a>
-                            <a href="#book-2" class="block hover:text-earth-sand">Book 2: Little Turtle and the River's Song</a>
+                            <a href="#book-1" @click="mobileOpen = false" class="block hover:text-earth-sand">Book 1: Little Turtle and the Great Tradition</a>
+                            <a href="#book-2" @click="mobileOpen = false" class="block hover:text-earth-sand">Book 2: Little Turtle and the River's Song</a>
                             <p class="block text-gray-400">Book 3: (coming soon)</p>
                         </div>
-                        <a href="#about" class="block text-lg hover:text-earth-sand">About the Author</a>
-                        <a href="#contact" class="block text-lg hover:text-earth-sand">Contact</a>
+                        <a href="#about" @click="mobileOpen = false" class="block text-lg hover:text-earth-sand">About the Author</a>
+                        <a href="#contact" @click="mobileOpen = false" class="block text-lg hover:text-earth-sand">Contact</a>
                     </div>
                 </div>
             </div>
