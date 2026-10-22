@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travis J. Griffin | Tales of the Wyandotte</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            dark: '#1b3a2b',
+                            DEFAULT: '#2d5a43',
+                            light: '#4a8265',
+                        },
+                        earth: {
+                            warm: '#8c5830',
+                            sand: '#f4ebd0',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Alpine.js for interactive dropdown menus -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-earth-sand/30 text-gray-800 font-sans antialiased">
+
+    <!-- NAVIGATION BAR -->
+    <header class="bg-forest-dark text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Site Brand / Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-bold tracking-wide hover:text-earth-sand transition">Travis J. Griffin</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-earth-sand transition">Home</a>
+                    
+                    <!-- Dropdown: Series -->
+                    <div x-data="{ open: false }" @mouseleave="open = false" class="relative">
+                        <button @mouseover="open = true" @click="open = !open" class="flex items-center hover:text-earth-sand transition focus:outline-none">
+                            <span>Tales of the Wyandotte</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <!-- Dropdown Panel -->
+                        <div x-show="open" x-transition.origin.top.duration.200ms class="absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg py-2 border border-gray-100">
+                            <a href="#book-1" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark font-medium">Book 1: Little Turtle & The Great Tradition</a>
+                            <a href="#series-overview" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark">Series Overview & Vision</a>
+                            <a href="#lore" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark">Eastern Woodlands Setting</a>
+                        </div>
+                    </div>
+
+                    <a href="#about" class="hover:text-earth-sand transition">About the Author</a>
+                    <a href="#resources" class="hover:text-earth-sand transition">Parents & Educators</a>
+                    <a href="#contact" class="hover:text-earth-sand transition">Contact</a>
+                </nav>
+
+                <!-- Buy CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#book-1" class="bg-earth-warm hover:bg-earth-warm/90 text-white px-5 py-2.5 rounded-lg font-medium shadow transition">Get the Book</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center" x-data="{ mobileOpen: false }">
+                    <button @click="mobileOpen = !mobileOpen" class="text-white focus:outline-none">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                    <!-- Mobile Menu Drawer -->
+                    <div x-show="mobileOpen" class="absolute top-20 left-0 w-full bg-forest-dark text-white shadow-xl border-t border-forest-light/30 px-6 py-6 space-y-4">
+                        <a href="#home" class="block text-lg hover:text-earth-sand">Home</a>
+                        <div class="space-y-2 pl-4 border-l-2 border-forest-light/40">
+                            <p class="text-xs uppercase tracking-wider text-earth-sand font-semibold">Tales of the Wyandotte</p>
+                            <a href="#book-1" class="block hover:text-earth-sand">Book 1: Little Turtle & The Great Tradition</a>
+                            <a href="#series-overview" class="block hover:text-earth-sand">Series Overview</a>
+                        </div>
+                        <a href="#about" class="block text-lg hover:text-earth-sand">About the Author</a>
+                        <a href="#resources" class="block text-lg hover:text-earth-sand">Parents & Educators</a>
+                        <a href="#contact" class="block text-lg hover:text-earth-sand">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative bg-forest-dark text-white py-24 lg:py-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="inline-block bg-earth-warm/80 text-earth-sand text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Children's Literature (Ages 3–8)</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">Stories of Heritage, Wisdom, and Family</h1>
+                <p class="text-lg text-gray-200 leading-relaxed">Welcome to the *Tales of the Wyandotte* series. Journey back to the historical Eastern Woodlands through the eyes of Little Turtle, discovering timeless lessons in patience, active listening, and generational bonds.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                    <a href="#book-1" class="bg-earth-warm hover:bg-earth-warm/90 text-white text-center px-8 py-3.5 rounded-xl font-medium shadow-lg transition">Explore Book 1</a>
+                    <a href="#about" class="border border-white/40 hover:bg-white/10 text-white text-center px-8 py-3.5 rounded-xl font-medium transition">Meet the Author</a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <!-- Visual Book Mockup Placeholder / Cover -->
+                <div class="w-72 sm:w-80 h-[450px] bg-forest rounded-2xl shadow-2xl border-4 border-white/20 flex flex-col items-center justify-center p-6 text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));">
+                    <span class="text-xs tracking-widest text-earth-sand uppercase mb-2">Series Debut</span>
+                    <h2 class="text-2xl font-bold text-white mb-4">Little Turtle and the Great Tradition</h2>
+                    <p class="text-sm text-gray-200">Available now on Amazon Kindle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED BOOK SECTION -->
+    <section id="book-1" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 grid grid-cols-1 lg:grid-cols-2 gap-12 p-8 lg:p-12 items-center">
+            <div class="bg-earth-sand/40 rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
+                <div class="text-center">
+                    <svg class="w-20 h-20 mx-auto text-forest mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    <p class="font-semibold text-forest-dark text-lg">Little Turtle and the Great Tradition</p>
+                    <p class="text-xs text-gray-500 mt-1">Tales of the Wyandotte — Book 1</p>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div class="inline-flex items-center space-x-2 text-earth-warm font-semibold text-sm">
+                    <span>★ Available in eBook</span>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">An Evening of Warmth, Storytelling, and Heritage</h2>
+                <p class="text-gray-600 leading-relaxed">Set in the historical Eastern Woodlands prior to the tribe's removal to Oklahoma, the story follows young Little Turtle as she gathers with family around the central hearth fire pit inside the traditional longhouse. Through storytelling with her grandfather, she learns foundational values of listening, patience, and community connection.</p>
+                
+                <div class="bg-forest/5 border-l-4 border-forest p-4 rounded-r-lg">
+                    <h4 class="font-semibold text-forest-dark text-sm uppercase tracking-wider">Parental Guidance Framework</h4>
+                    <p class="text-sm text-gray-600 mt-1">Designed as an effective tool for parents and educators to facilitate meaningful conversations around active listening, respect for elders, and family storytelling.</p>
+                </div>
+
+                <div>
+                    <a href="https://amazon.com" target="_blank" class="inline-block bg-forest hover:bg-forest-dark text-white px-8 py-3.5 rounded-xl font-medium shadow transition">Purchase on Amazon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT THE AUTHOR -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h2 class="text-3xl font-bold text-gray-900">About the Author</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">Travis J. Griffin is an instructional designer and author dedicated to crafting meaningful children's literature that honors cultural heritage and generational wisdom. Through the *Tales of the Wyandotte* series, Travis brings historical settings and timeless family values to life for young readers ages 3 to 8.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-forest-dark text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+            <p class="text-sm">&copy; 2026 Travis J. Griffin. All rights reserved.</p>
+            <div class="flex space-x-6 text-sm">
+                <a href="#home" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#contact" class="hover:text-white transition">Contact & Inquiries</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
