@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travis J. Griffin | Tales of the Wyandotte</title>
+    <title>Tales of the Wyandotte | Travis J. Griffin</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -36,7 +36,7 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Site Brand / Logo -->
                 <div class="flex-shrink-0">
-                    <a href="#" class="text-xl font-bold tracking-wide hover:text-earth-sand transition">Travis J. Griffin</a>
+                    <a href="#home" class="text-lg sm:text-xl font-bold tracking-wide hover:text-earth-sand transition">Tales of the Wyandotte</a>
                 </div>
 
                 <!-- Desktop Menu -->
@@ -50,16 +50,14 @@
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <!-- Dropdown Panel -->
-                        <div x-show="open" x-transition.origin.top.duration.200ms class="absolute left-0 mt-2 w-64 bg-white text-gray-800 rounded-md shadow-lg py-2 border border-gray-100">
+                        <div x-show="open" x-transition.origin.top.duration.200ms class="absolute left-0 mt-2 w-72 bg-white text-gray-800 rounded-md shadow-lg py-2 border border-gray-100">
                             <a href="#book-1" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark font-medium">Book 1: Little Turtle & The Great Tradition</a>
-                            <a href="#series-overview" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark">Series Overview & Vision</a>
-                            <a href="#lore" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark">Eastern Woodlands Setting</a>
+                            <a href="#book-2" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark font-medium">Book 2: Little Turtle and the River's Song</a>
+                            <a href="#book-3" class="block px-4 py-2 text-sm text-gray-400 font-medium cursor-default">Book 3: (coming soon)</a>
                         </div>
                     </div>
 
                     <a href="#about" class="hover:text-earth-sand transition">About the Author</a>
-                    <a href="#resources" class="hover:text-earth-sand transition">Parents & Educators</a>
-                    <a href="#contact" class="hover:text-earth-sand transition">Contact</a>
                 </nav>
 
                 <!-- Buy CTA Button -->
@@ -78,11 +76,10 @@
                         <div class="space-y-2 pl-4 border-l-2 border-forest-light/40">
                             <p class="text-xs uppercase tracking-wider text-earth-sand font-semibold">Tales of the Wyandotte</p>
                             <a href="#book-1" class="block hover:text-earth-sand">Book 1: Little Turtle & The Great Tradition</a>
-                            <a href="#series-overview" class="block hover:text-earth-sand">Series Overview</a>
+                            <a href="#book-2" class="block hover:text-earth-sand">Book 2: Little Turtle and the River's Song</a>
+                            <p class="block text-gray-400">Book 3: (coming soon)</p>
                         </div>
                         <a href="#about" class="block text-lg hover:text-earth-sand">About the Author</a>
-                        <a href="#resources" class="block text-lg hover:text-earth-sand">Parents & Educators</a>
-                        <a href="#contact" class="block text-lg hover:text-earth-sand">Contact</a>
                     </div>
                 </div>
             </div>
@@ -95,18 +92,16 @@
             <div class="space-y-6">
                 <span class="inline-block bg-earth-warm/80 text-earth-sand text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Children's Literature (Ages 3–8)</span>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">Stories of Heritage, Wisdom, and Family</h1>
-                <p class="text-lg text-gray-200 leading-relaxed">Welcome to the *Tales of the Wyandotte* series. Journey back to the historical Eastern Woodlands through the eyes of Little Turtle, discovering timeless lessons in patience, active listening, and generational bonds.</p>
+                <p class="text-lg text-gray-200 leading-relaxed">Welcome to the Tales of the Wyandotte series. Journey back to the historical Eastern Woodlands through the eyes of Little Turtle, discovering timeless lessons in patience, active listening, and generational bonds.</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
                     <a href="#book-1" class="bg-earth-warm hover:bg-earth-warm/90 text-white text-center px-8 py-3.5 rounded-xl font-medium shadow-lg transition">Explore Book 1</a>
                     <a href="#about" class="border border-white/40 hover:bg-white/10 text-white text-center px-8 py-3.5 rounded-xl font-medium transition">Meet the Author</a>
                 </div>
             </div>
             <div class="flex justify-center">
-                <!-- Visual Book Mockup Placeholder / Cover -->
-                <div class="w-72 sm:w-80 h-[450px] bg-forest rounded-2xl shadow-2xl border-4 border-white/20 flex flex-col items-center justify-center p-6 text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));">
-                    <span class="text-xs tracking-widest text-earth-sand uppercase mb-2">Series Debut</span>
-                    <h2 class="text-2xl font-bold text-white mb-4">Little Turtle and the Great Tradition</h2>
-                    <p class="text-sm text-gray-200">Available now on Amazon Kindle</p>
+                <!-- Image 3: Series / Scene Reference Image -->
+                <div class="w-full max-w-md rounded-2xl shadow-2xl border-4 border-white/20 overflow-hidden">
+                    <img src="watermarked_img_12147929866888242332.jpg" alt="Tales of the Wyandotte Series Reference Scene" class="w-full h-auto object-cover">
                 </div>
             </div>
         </div>
@@ -115,12 +110,9 @@
     <!-- FEATURED BOOK SECTION -->
     <section id="book-1" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 grid grid-cols-1 lg:grid-cols-2 gap-12 p-8 lg:p-12 items-center">
-            <div class="bg-earth-sand/40 rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
-                <div class="text-center">
-                    <svg class="w-20 h-20 mx-auto text-forest mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                    <p class="font-semibold text-forest-dark text-lg">Little Turtle and the Great Tradition</p>
-                    <p class="text-xs text-gray-500 mt-1">Tales of the Wyandotte — Book 1</p>
-                </div>
+            <div class="bg-earth-sand/40 rounded-2xl p-6 flex items-center justify-center">
+                <!-- Image 6: Book 1 Cover -->
+                <img src="Little Turtle Cover.jpeg" alt="Little Turtle and the Great Tradition Book Cover" class="w-72 sm:w-80 rounded-xl shadow-lg border border-gray-200 object-cover">
             </div>
             <div class="space-y-6">
                 <div class="inline-flex items-center space-x-2 text-earth-warm font-semibold text-sm">
@@ -143,9 +135,18 @@
 
     <!-- ABOUT THE AUTHOR -->
     <section id="about" class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <h2 class="text-3xl font-bold text-gray-900">About the Author</h2>
-            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">Travis J. Griffin is an instructional designer and author dedicated to crafting meaningful children's literature that honors cultural heritage and generational wisdom. Through the *Tales of the Wyandotte* series, Travis brings historical settings and timeless family values to life for young readers ages 3 to 8.</p>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                <div class="flex justify-center">
+                    <!-- Image 4: Author Photo -->
+                    <img src="Travis griffin.jpg" alt="Travis J. Griffin" class="w-64 h-64 sm:w-72 sm:h-72 object-cover rounded-2xl shadow-xl border-4 border-forest/20">
+                </div>
+                <div class="lg:col-span-2 space-y-6">
+                    <h2 class="text-3xl font-bold text-gray-900">About the Author</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">Travis J. Griffin is a citizen of the Wyandotte Nation in Wyandotte, Oklahoma, a United States Marine Corps veteran, and a professional organizational change manager by trade. Holding a Master’s Degree in Public Administration, Travis brings a deep commitment to community structure, strategic vision, and cultural preservation into all of his creative works.</p>
+                    <p class="text-gray-600 leading-relaxed">Through the *Tales of the Wyandotte* series, Travis combines his professional background in structured communication and instructional methodology with his heritage to craft meaningful, values-driven children's literature. His stories are designed to engage young minds ages 3 to 8 while fostering intergenerational dialogue, patience, and active listening within families.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -154,8 +155,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
             <p class="text-sm">&copy; 2026 Travis J. Griffin. All rights reserved.</p>
             <div class="flex space-x-6 text-sm">
-                <a href="#home" class="hover:text-white transition">Privacy Policy</a>
-                <a href="#contact" class="hover:text-white transition">Contact & Inquiries</a>
+                <a href="#home" class="hover:text-white transition">Back to Top</a>
             </div>
         </div>
     </footer>
