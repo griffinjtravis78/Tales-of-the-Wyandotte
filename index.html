@@ -139,7 +139,10 @@
                 </div>
 
                 <div>
-                    <a href="https://www.amazon.com/gp/aw/d/B0HP4TWGGJ#detailBullets_feature_div" target="_blank" class="inline-block bg-forest hover:bg-forest-dark text-white px-8 py-3.5 rounded-xl font-medium shadow transition">Purchase on Amazon</a>
+                    <a href="https://www.amazon.com/gp/aw/d/B0HP4TWGGJ#detailBullets_feature_div" 
+                       target="_blank" 
+                       onclick="gtag('event', 'amazon_click', { 'book_title': 'Great Tradition' });"
+                       class="inline-block bg-forest hover:bg-forest-dark text-white px-8 py-3.5 rounded-xl font-medium shadow transition">Purchase on Amazon</a>
                 </div>
             </div>
         </div>
@@ -176,7 +179,10 @@
                 </div>
 
                 <div>
-                    <a href="https://www.amazon.com/dp/B0HPN6PN6D" target="_blank" class="inline-block bg-forest hover:bg-forest-dark text-white px-8 py-3.5 rounded-xl font-medium shadow transition">Purchase on Amazon</a>
+                    <a href="https://www.amazon.com/dp/B0HPN6PN6D" 
+                       target="_blank" 
+                       onclick="gtag('event', 'amazon_click', { 'book_title': 'Rivers Song' });"
+                       class="inline-block bg-forest hover:bg-forest-dark text-white px-8 py-3.5 rounded-xl font-medium shadow transition">Purchase on Amazon</a>
                 </div>
             </div>
         </div>
@@ -203,9 +209,21 @@
     <section id="contact" class="py-20 bg-earth-sand/50 border-t border-gray-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             <h2 class="text-3xl font-bold text-gray-900">Contact & Inquiries</h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">For media inquiries, tribal office communications, school/library visits, or questions regarding the *Tales of the Wyandotte* series, please reach out directly.</p>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">For media inquiries, tribal office communications, school/library visits, or questions regarding the *Tales of the Wyandotte* series, please reach out directly at <a href="mailto:griffinjtravis78@gmail.com" class="text-forest font-semibold hover:underline">griffinjtravis78@gmail.com</a>.</p>
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-forest-dark text-gray-300 py-12 border-t border-forest-light/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <p class="text-sm">© 2026 Travis J. Griffin. All rights reserved.</p>
+            <div class="flex items-center space-x-6 text-sm">
+                <a href="privacy.html" class="hover:text-earth-sand transition">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-earth-sand transition">Terms of Service</a>
+                <a href="shipping.html" class="hover:text-earth-sand transition">Shipping Policy</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
