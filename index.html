@@ -61,10 +61,10 @@
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <!-- Dropdown Panel -->
-                        <div x-show="open" x-transition.origin.top.duration.200ms class="absolute left-0 mt-0 w-72 bg-white text-gray-800 rounded-md shadow-lg py-2 border border-gray-100 z-50">
+                        <div x-show="open" x-transition.origin.top.duration.200ms class="absolute left-0 mt-0 w-80 bg-white text-gray-800 rounded-md shadow-lg py-2 border border-gray-100 z-50">
                             <a href="#book-1" @click="open = false" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark font-medium">Book 1: Little Turtle and the Great Tradition</a>
                             <a href="#book-2" @click="open = false" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark font-medium">Book 2: Little Turtle and the River's Song</a>
-                            <a href="#book-3" @click="open = false" class="block px-4 py-2 text-sm text-gray-400 font-medium cursor-default">Book 3: (coming soon)</a>
+                            <a href="#book-3" @click="open = false" class="block px-4 py-2 text-sm hover:bg-forest-light/10 hover:text-forest-dark font-medium">Book 3: Little Turtle and the Three Sisters in the Garden (Coming Soon)</a>
                         </div>
                     </div>
 
@@ -89,7 +89,7 @@
                             <p class="text-xs uppercase tracking-wider text-earth-sand font-semibold">Tales of the Wyandotte</p>
                             <a href="#book-1" @click="mobileOpen = false" class="block hover:text-earth-sand">Book 1: Little Turtle and the Great Tradition</a>
                             <a href="#book-2" @click="mobileOpen = false" class="block hover:text-earth-sand">Book 2: Little Turtle and the River's Song</a>
-                            <p class="block text-gray-400">Book 3: (coming soon)</p>
+                            <a href="#book-3" @click="mobileOpen = false" class="block hover:text-earth-sand">Book 3: Little Turtle and the Three Sisters in the Garden (Coming Soon)</a>
                         </div>
                         <a href="#about" @click="mobileOpen = false" class="block text-lg hover:text-earth-sand">About the Author</a>
                         <a href="#contact" @click="mobileOpen = false" class="block text-lg hover:text-earth-sand">Contact</a>
@@ -183,6 +183,45 @@
                        target="_blank" 
                        onclick="gtag('event', 'amazon_click', { 'book_title': 'Rivers Song' });"
                        class="inline-block bg-forest hover:bg-forest-dark text-white px-8 py-3.5 rounded-xl font-medium shadow transition">Purchase on Amazon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED BOOK SECTION: BOOK 3 -->
+    <section id="book-3" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-200">
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 grid grid-cols-1 lg:grid-cols-2 gap-12 p-8 lg:p-12 items-center">
+            <div class="bg-earth-sand/40 rounded-2xl p-6 flex items-center justify-center">
+                <!-- Book 3 Cover Image -->
+                <img src="Three Sisters Cover.jpeg" alt="Little Turtle and the Three Sisters in the Garden Book Cover" class="w-72 sm:w-80 rounded-xl shadow-lg border border-gray-200 object-cover">
+            </div>
+            <div class="space-y-6">
+                <div class="inline-flex items-center space-x-2 text-earth-warm font-semibold text-sm">
+                    <span>★ Tales of the Wyandotte — Book 3</span>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">Little Turtle and the Three Sisters in the Garden</h2>
+                <p class="text-gray-600 leading-relaxed">Set within the historical Eastern Woodlands, <em>Little Turtle and the Three Sisters in the Garden</em> follows 10-year-old Little Turtle as she steps into the warm morning sunlight to tend her family’s garden. Guided by the timeless wisdom of her grandmother, Little Turtle discovers the sacred agricultural tradition of the Three Sisters—corn, beans, and squash—and how these companion plants grow, support, and protect one another when planted side by side.</p>
+                
+                <div class="bg-forest/5 border-l-4 border-forest p-4 rounded-r-lg">
+                    <h4 class="font-semibold text-forest-dark text-sm uppercase tracking-wider">Themes & Stewardship</h4>
+                    <p class="text-sm text-gray-600 mt-1">Traditional Indigenous stewardship, companion planting cooperation, community harmony, and living in balance with the natural world.</p>
+                </div>
+
+                <!-- Companion Song Callout -->
+                <div class="bg-earth-sand/50 border border-earth-warm/30 rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <h4 class="font-serif font-bold text-gray-900 text-base">🎵 Three Sisters in the Garden (Official Companion Track)</h4>
+                        <p class="text-sm text-gray-600 mt-0.5">Download the official audio track featuring a lively song about Corn, Beans, and Squash and how they support each other in growth and protection.</p>
+                    </div>
+                    <span class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-gray-500 bg-gray-200 rounded-xl shadow-sm whitespace-nowrap cursor-default">
+                        Coming Soon
+                    </span>
+                </div>
+
+                <div>
+                    <span class="inline-block bg-gray-300 text-gray-700 px-8 py-3.5 rounded-xl font-medium shadow-sm cursor-default">
+                        Coming Soon
+                    </span>
                 </div>
             </div>
         </div>
