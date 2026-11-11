@@ -240,8 +240,8 @@
         <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
             <!-- Product Card: Little Turtle Beaded Bracelet -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-8">
-                <!-- Image Carousel Component using Alpine.js with correct explicit filenames -->
-                <div x-data="{ active: 0, images: ['Little Turtle Bracelet Front.jpeg', 'Little Turtle Bracelet Back.jpeg'] }" class="relative bg-earth-sand/40 rounded-2xl p-4 mb-6">
+                <!-- Image Carousel Component using Alpine.js with URL-encoded filenames -->
+                <div x-data="{ active: 0, images: ['Little%20Turtle%20Bracelet%20Front.jpeg', 'Little%20Turtle%20Bracelet%20Back.jpeg'] }" class="relative bg-earth-sand/40 rounded-2xl p-4 mb-6">
                     <!-- Carousel Slides -->
                     <div class="relative h-64 sm:h-80 overflow-hidden rounded-xl flex items-center justify-center">
                         <template x-for="(img, idx) in images" :key="idx">
@@ -299,18 +299,15 @@
                 <div class="lg:col-span-2 space-y-6">
                     <h2 class="text-3xl font-bold text-gray-900">About the Author</h2>
                     <p class="text-lg text-gray-600 leading-relaxed">Travis J. Griffin is a citizen of the Wyandotte Nation in Wyandotte, Oklahoma, a United States Marine Corps veteran, and a professional organizational change manager by trade. Holding a Master’s Degree in Public Administration, Travis brings a deep commitment to community structure, strategic vision, and cultural preservation into all of his creative works.</p>
-                    <p class="text-gray-600 leading-relaxed">Through the *Tales of the Wyandotte* series, Travis combines his professional background in structured communication and instructional methodology with his heritage to craft meaningful, values-driven children's literature. His stories are designed to engage young minds ages 3 to 8 while fostering intergenerational dialogue, patience, and active listening within families.</p>
+                    <p class="text-gray-600 leading-relaxed">Pioneering meaningful literature, Travis combines his professional background in structured communication with his heritage to craft values-driven children's literature designed to foster intergenerational dialogue.</p>
                 </div>
             </div>
 
-            <!-- Author's Note & Historical Disclaimer (Placed under About the Author) -->
+            <!-- Author's Note & Historical Disclaimer -->
             <div class="mt-16 pt-12 border-t border-gray-100 max-w-4xl mx-auto space-y-4 bg-earth-sand/20 p-8 rounded-2xl border border-earth-warm/20">
                 <h3 class="text-xl font-bold text-gray-900">Author's Note & Historical Disclaimer</h3>
                 <p class="text-sm text-gray-600 leading-relaxed">
                     The stories and characters within <em>Tales of the Wyandotte: Little Turtle's Journeys</em> are rooted in the rich history, cultural traditions, and lifeways of the Wyandotte Nation. While historical facts, traditional agricultural practices (such as the Three Sisters companion planting), and cultural elements have been carefully researched and honored, certain narrative events, dialogue, and character interactions have been shaped with creative and editorial liberties to ensure an engaging, imaginative, and age-appropriate reading experience for young readers.
-                </p>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                    This work is intended to spark curiosity, celebrate Indigenous heritage, and inspire young minds to explore history and nature.
                 </p>
             </div>
         </div>
