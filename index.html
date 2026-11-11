@@ -240,8 +240,8 @@
         <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
             <!-- Product Card: Little Turtle Beaded Bracelet -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-8">
-                <!-- Image Carousel Component using Alpine.js -->
-                <div x-data="{ active: 0, images: ['Little-Turtle-Bracelet-Front.jpeg', 'Little-Turtle-Bracelet-Back.jpeg'] }" class="relative bg-earth-sand/40 rounded-2xl p-4 mb-6">
+                <!-- Image Carousel Component using Alpine.js with root filenames and %20 encoding -->
+                <div x-data="{ active: 0, images: ['Little%20Turtle%20Bracelet%20Front.jpeg', 'Little%20Turtle%20Bracelet%20Back.jpeg'] }" class="relative bg-earth-sand/40 rounded-2xl p-4 mb-6">
                     <!-- Carousel Slides -->
                     <div class="relative h-64 sm:h-80 overflow-hidden rounded-xl flex items-center justify-center">
                         <template x-for="(img, idx) in images" :key="idx">
