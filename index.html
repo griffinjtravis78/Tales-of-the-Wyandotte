@@ -237,23 +237,23 @@
             <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Explore companion keepsakes designed to accompany the Tales of the Wyandotte series.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <!-- Product Card 1: Little Turtle Beaded Bracelet -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-8 flex flex-col justify-between">
                 <div>
-                    <div class="bg-earth-sand/40 rounded-2xl p-4 mb-6 flex items-center justify-center h-64 sm:h-80 overflow-hidden">
+                    <div class="bg-earth-sand/40 rounded-2xl p-4 mb-6 flex items-center justify-center h-64 overflow-hidden">
                         <img src="Little%20Turtle%20Bracelet%20Front.jpeg" alt="Little Turtle Beaded Bracelet Front" class="max-h-full max-w-full object-contain rounded-lg shadow-md">
                     </div>
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <h3 class="text-2xl font-bold text-gray-900">Little Turtle Beaded Bracelet</h3>
-                        <span class="text-earth-warm font-bold text-xl mt-1 sm:mt-0">$9.99</span>
+                        <h3 class="text-xl font-bold text-gray-900">Little Turtle Beaded Bracelet</h3>
+                        <span class="text-earth-warm font-bold text-lg mt-1 sm:mt-0">$9.99</span>
                     </div>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">
                         Handcrafted 6mm and 8mm stretch beaded bracelet featuring natural stone turquoise-style beads and a detailed silver turtle accent bead. Designed specifically for ages 5–11 with durable hand-strung elastic. Comes on a custom display card featuring Little Turtle artwork.
                     </p>
                 </div>
                 <div>
-                    <a href="#" target="_blank" class="w-full inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-earth-warm hover:bg-earth-warm/90 rounded-xl shadow-md transition-all">
+                    <a href="#" target="_blank" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-earth-warm hover:bg-earth-warm/90 rounded-xl shadow-md transition-all">
                         Purchase Bracelet
                     </a>
                 </div>
@@ -265,7 +265,7 @@
                     <!-- Image Carousel Component using Alpine.js -->
                     <div x-data="{ active: 0, images: ['Garden%20Frontjpeg.jpeg', 'Garden%20Back.jpeg'] }" class="relative bg-earth-sand/40 rounded-2xl p-4 mb-6">
                         <!-- Carousel Slides -->
-                        <div class="relative h-64 sm:h-80 overflow-hidden rounded-xl flex items-center justify-center">
+                        <div class="relative h-64 overflow-hidden rounded-xl flex items-center justify-center">
                             <template x-for="(img, idx) in images" :key="idx">
                                 <div x-show="active === idx" class="absolute inset-0 flex items-center justify-center">
                                     <img :src="img" :alt="'Grown Your Own Little Turtle Garden view ' + (idx + 1)" class="max-h-full max-w-full object-contain rounded-lg shadow-md">
@@ -290,16 +290,37 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                        <h3 class="text-2xl font-bold text-gray-900">Grown Your Own Little Turtle Garden</h3>
-                        <span class="text-earth-warm font-bold text-xl mt-1 sm:mt-0">$5.99</span>
+                        <h3 class="text-xl font-bold text-gray-900">Grown Your Own Little Turtle Garden</h3>
+                        <span class="text-earth-warm font-bold text-lg mt-1 sm:mt-0">$5.99</span>
                     </div>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">
                         Official companion seed kit featuring the Three Sisters (Corn, Bean, and Squash) to accompany Book 3 and Song. Includes growing instructions and seed packets designed to teach traditional Indigenous agriculture and companion planting.
                     </p>
                 </div>
                 <div>
-                    <a href="#" target="_blank" class="w-full inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-earth-warm hover:bg-earth-warm/90 rounded-xl shadow-md transition-all">
+                    <a href="#" target="_blank" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-earth-warm hover:bg-earth-warm/90 rounded-xl shadow-md transition-all">
                         Purchase Garden Kit
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product Card 3: Little Turtle’s Garden Seed Kit with Seedling Container -->
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-8 flex flex-col justify-between">
+                <div>
+                    <div class="bg-earth-sand/40 rounded-2xl p-4 mb-6 flex items-center justify-center h-64 overflow-hidden">
+                        <img src="Little%20Turtle%E2%80%99s%20Garden%20Seed%20Kit.jpg" alt="Little Turtle's Garden Seed Kit with Seedling Container" class="max-h-full max-w-full object-contain rounded-lg shadow-md">
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-900">Little Turtle's Garden Seed Kit (with Seedling Container)</h3>
+                        <span class="text-earth-warm font-bold text-lg mt-1 sm:mt-0">$9.99</span>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        Complete garden kit featuring the Three Sisters seed packets, growing instruction cards, and a durable seedling container / greenhouse propagator to start your garden right at home.
+                    </p>
+                </div>
+                <div>
+                    <a href="#" target="_blank" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-earth-warm hover:bg-earth-warm/90 rounded-xl shadow-md transition-all">
+                        Purchase Complete Kit
                     </a>
                 </div>
             </div>
