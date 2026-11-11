@@ -241,26 +241,26 @@
             <!-- Product Card: Little Turtle Beaded Bracelet -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-8">
                 <!-- Image Carousel Component using Alpine.js -->
-                <div x-data="{ activeSlide: 0, slides: ['Little Turtle Bracelet Front.jpeg', 'Little Turtle Back.jpeg'] }" class="relative bg-earth-sand/40 rounded-2xl p-4 mb-6">
+                <div x-data="{ activeSlide: 0, slides: ['Little Turtle Bracelet Front.jpeg', 'Little Turtle Bracelet Back.jpeg'] }" class="relative bg-earth-sand/40 rounded-2xl p-4 mb-6">
                     <!-- Carousel Slides -->
                     <div class="relative h-64 sm:h-80 overflow-hidden rounded-xl flex items-center justify-center">
                         <template x-for="(img, index) in slides" :key="index">
                             <div x-show="activeSlide === index" x-transition.opacity.duration.300ms class="absolute inset-0 flex items-center justify-center">
-                                <img :src="img" alt="Little Turtle Beaded Bracelet view" class="max-h-full max-w-full object-contain rounded-lg shadow-md">
+                                <img :src="img" :alt="'Little Turtle Beaded Bracelet view ' + (index + 1)" class="max-h-full max-w-full object-contain rounded-lg shadow-md">
                             </div>
                         </template>
                     </div>
 
                     <!-- Carousel Controls (Previous / Next Buttons) -->
-                    <button @click="activeSlide = (activeSlide === 0 ? slides.length - 1 : activeSlide - 1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full focus:outline-none transition">
+                    <button @click="activeSlide = (activeSlide === 0 ? slides.length - 1 : activeSlide - 1)" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full focus:outline-none transition z-10">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                     </button>
-                    <button @click="activeSlide = (activeSlide === slides.length - 1 ? 0 : activeSlide + 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full focus:outline-none transition">
+                    <button @click="activeSlide = (activeSlide === slides.length - 1 ? 0 : activeSlide + 1)" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full focus:outline-none transition z-10">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </button>
 
                     <!-- Carousel Indicators / Dots -->
-                    <div class="absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
+                    <div class="absolute bottom-2 left-0 right-0 flex justify-center space-x-2 z-10">
                         <template x-for="(img, index) in slides" :key="index">
                             <button @click="activeSlide = index" :class="{ 'bg-earth-warm w-6': activeSlide === index, 'bg-gray-400 w-2': activeSlide !== index }" class="h-2 rounded-full transition-all duration-300"></button>
                         </template>
@@ -271,7 +271,7 @@
                 <div class="space-y-4 text-center sm:text-left">
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                         <h3 class="text-2xl font-bold text-gray-900">Little Turtle Beaded Bracelet</h3>
-                        <span class="text-earth-warm font-bold text-xl mt-1 sm:mt-0">$9.49</span>
+                        <span class="text-earth-warm font-bold text-xl mt-1 sm:mt-0">$9.99</span>
                     </div>
                     <p class="text-gray-600 text-sm leading-relaxed">
                         Handcrafted 6mm and 8mm stretch beaded bracelet featuring natural stone turquoise-style beads and a detailed silver turtle accent bead. Designed specifically for ages 5–11 with durable hand-strung elastic. Comes on a custom display card featuring Little Turtle artwork.
